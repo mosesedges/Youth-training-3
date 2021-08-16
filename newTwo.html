@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>new Two</title>
+</head>
+<body>
+
+<h1 id="hello">Hello, Welcome</h1>
+<button data-color="red" >RED</button>
+<button data-color="green" >GREEN</button>
+<button data-color="blue">BLUE</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('button').forEach(function(button){
+        button.onclick = () => {
+          document.querySelector('#hello').style.color = button.dataset.color;
+        }
+      });
+    });
+
+  </script>
+</body>
+</html>

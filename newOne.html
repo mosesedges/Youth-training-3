@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New one</title>
+</head>
+
+<body>
+
+    <h1 id="num">0</h1>
+    <button>Increase</button>
+
+
+    <script>
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0)
+        }
+
+        function count() {
+            let counter = localStorage.getItem('counter');
+            counter++
+            document.querySelector('#num').innerHTML = counter
+            localStorage.setItem('counter', counter)
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#num').innerHTML = localStorage.getItem('counter');
+            document.querySelector('button').onclick = count;
+        })
+    </script>
+</body>
+
+</html>

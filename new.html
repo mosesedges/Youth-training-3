@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> 0 </h1>
+  <button onclick=counting() >count</button>
+
+  <button onclick=hello()>click here</button>
+
+  <h2>Welcome</h2>
+  <button onclick=greet()>change text</button>
+
+  
+
+  <script>
+
+    
+    // a simple count function that utilizes the alert function to display the number of clicks
+    
+    let count = 0;
+    function hello(){
+      count++
+      alert(count)
+    };
+    
+    // Accessing the innerHTML function through a ternary operator
+    
+    function greet(){
+      const header = document.querySelector('h2');
+      header.innerHTML === 'Welcome'? header.innerHTML = 'Bye Bye': header.innerHTML = 'Welcome';
+    };
+
+    //Modulus operator is used to control the alert activation 
+    let counter = 0
+    function counting(){
+      counter++;
+      document.querySelector('h1').innerHTML = counter ;
+
+      if(counter % 10 === 0){
+        alert(`count is now ${counter}`)
+      }      
+    };
+
+
+    </script>
+</body>
+</html>
